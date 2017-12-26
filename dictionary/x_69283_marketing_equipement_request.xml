@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Equipement Request" max_length="40" name="x_69283_marketing_equipement_request" type="collection">
+        <element label="Marketing Event" max_length="32" name="marketing_event" reference="x_69283_marketing_events_table" type="reference"/>
+        <element label="Needed From" max_length="40" name="needed_from" type="glide_date"/>
+        <element label="Needed Until" max_length="40" name="needed_until" type="glide_date"/>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element display="true" label="Type" max_length="32" name="type" reference="cmdb_hardware_product_model" type="reference"/>
+        <index name="index">
+            <element name="marketing_event"/>
+        </index>
+        <index name="index2">
+            <element name="type"/>
+        </index>
+    </element>
+</database>
